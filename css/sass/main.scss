@@ -1,0 +1,30 @@
+$ip-orange-color: #ffa300;
+
+
+.display-hide{
+	display:none;
+}
+
+
+.jumbotron,
+.navbar-ipcentrum  {
+  background: #2d333f;
+}
+
+.icon-ipcentrum-logo{
+	
+	width:170px;
+  	color:#fff;
+	span{
+  		position: absolute;
+  		font-size: 36px;
+	}
+}
+
+ .icon-ip-centrum-1{
+  color: $ip-orange-color;
+}
+
+.icon-ip-centrum-2{
+  color: #fff;
+}
