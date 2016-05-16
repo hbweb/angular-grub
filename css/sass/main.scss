@@ -1,4 +1,39 @@
+// Google Fonts
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,400italic,600,600italic,900);
+
+
+//Variables
+$body-font: 'Source Sans Pro', sans-serif;
+$body-color: #8797af;
 $ip-orange-color: #ffa300;
+
+
+// Styles
+body {
+  font-family: $body-font;
+  font-weight: normal;
+  background: #ecedf2;
+  color: $body-color;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+.navbar-main{
+	li{
+		a{
+			text-transform: uppercase;
+			font-size:12px;
+			font-weight:600;
+			color: $body-color;
+			padding: 22px 20px;
+			&:hover, &:active{
+				color:$ip-orange-color;
+				background: none;
+			}
+		}
+	}
+}
 
 
 .display-hide{
@@ -13,7 +48,7 @@ $ip-orange-color: #ffa300;
 
 .icon-ipcentrum-logo{
 	
-	width:170px;
+	width:180px;
   	color:#fff;
 	span{
   		position: absolute;
