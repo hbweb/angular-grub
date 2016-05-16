@@ -1,0 +1,44 @@
+
+
+/* ==========================================================================
+   Hung Bui's custom styles
+   ========================================================================== */
+
+.display-hide{
+	display:none;
+}
+
+
+.jumbotron,
+.navbar-ipcentrum  {
+  background: #2d333f;
+}
+
+.icon-ipcentrum-logo{
+  width:170px;
+  color:#fff;
+}
+
+.icon-ipcentrum-logo span{
+  position: absolute;
+  font-size: 36px;
+}
+
+ .icon-ip-centrum-1{
+  color: #ffa300;
+
+}
+
+.icon-ip-centrum-2{
+  color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
