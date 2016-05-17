@@ -41,26 +41,41 @@
           </button>
           <div class="icon-ipcentrum-logo">
           <a class="navbar-brand" href="index.html"><span class="icon icon-ip-centrum-1"></span><span class="icon icon-ip-centrum-2"></span></a>
-          </div>          
-
+          </div>
         </div>
+
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-left navbar-main">
             <li class="active"><a href="index.html">Home</a></li>
             <li><a href="README.md">Support</a></li>
           </ul>
-        </div><!--/.navbar-collapse -->
+          
+          <div class="navbar-text navbar-right navbar-email">
+            <a class="navbar-link" href="#">
+            <i class="small-profile-pic"></i>
+            email@test.com 
+            <span class="icon icon-chevron-thin-down"></span>
+            </a>
+          </div>
+        </div>
       </div>
     </nav>
 
-    <!-- Main jumbotron for a primary marketing message or call to action -->
+    
     <div class="jumbotron">
       <div class="container">
+        <div id="profile-summary" ng-controller="ProfileCtrl">
+          <div class="profile-mid"></div>
+          <div class="profile-mid-right">
+            <h2><span class="capitalize">{{profile.forename}}</span> <span class="capitalize">{{profile.surname}}</span></h2>
+            <p>{{profile.title}}</p>  
+          </div>
+        </div>
       </div>
       <div class="container">
 		     <ul id="tabs" class="nav nav-pills" data-tabs="tabs">
 		         <li class="active"><a href="#profile_form" data-toggle="tab">Profile</a></li>
-		         <li><a href="#email_addresses_form" data-toggle="tab">Email addresses</a></li>
+		         <li><a href="#email_addresses_form" data-toggle="tab">Email Logins</a></li>
 		     </ul>
       </div>
     </div>

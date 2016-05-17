@@ -18,11 +18,53 @@ h1, h2, h3, h4, h5, h6 {
     color: #ffa300;
     background: none; }
 
+.navbar-email a {
+  color: #fff; }
+  .navbar-email a:hover, .navbar-email a:active {
+    text-decoration: none; }
+.navbar-email span.icon-chevron-thin-down {
+  color: #ffa300;
+  font-size: 10px;
+  font-weight: 200; }
+
+.nav-pills > li > a {
+  color: #8797AF;
+  text-transform: uppercase;
+  font-size: 12px;
+  margin: 0 0 7px 0;
+  padding: 5px 20px;
+  font-weight: 400; }
+.nav-pills > li > a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #ffa300;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s; }
+.nav-pills > li > a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1); }
+
+.nav-pills > li > a:hover, .nav-pills > li.active > a:hover, .nav-pills > li > a:focus, .nav-pills > li.active > a:focus {
+  border-radius: 0;
+  background: none; }
+
+.nav-pills > li.active > a {
+  background: none;
+  border-radius: 0;
+  border-bottom: 2px solid #ffa300; }
+
 .display-hide {
   display: none; }
 
-.jumbotron,
-.navbar-ipcentrum {
+.jumbotron, .navbar-ipcentrum {
   background: #2d333f; }
 
 .icon-ipcentrum-logo {
@@ -37,5 +79,24 @@ h1, h2, h3, h4, h5, h6 {
 
 .icon-ip-centrum-2 {
   color: #fff; }
+
+.capitalize {
+  display: inline-block; }
+
+.capitalize::first-letter {
+  text-transform: uppercase; }
+
+#profile-summary {
+  margin: 0 0 50px; }
+  #profile-summary .profile-mid {
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    border-radius: 20px;
+    width: 75px;
+    height: 75px;
+    background: #262a35;
+    float: left;
+    margin: 0 20px 0 0; }
 
 /*# sourceMappingURL=main.css.map */

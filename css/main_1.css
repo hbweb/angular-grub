@@ -89,17 +89,3 @@ input.add-email {
     padding-bottom: 0;
 }
 
-.nav-pills > li > a {
-	color: #8797AF;
-}
-
-.nav-pills > li > a:hover, .nav-pills > li.active > a:hover, .nav-pills > li > a:focus, .nav-pills > li.active > a:focus  {
-	border-radius: 0;
-	background: none;
-}
-
-.nav-pills > li.active > a {
-	background: none;
-	border-radius: 0;
-	border-bottom: 2px solid #FFA300;
-}
