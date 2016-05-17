@@ -39,3 +39,40 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff; }
 
 /*# sourceMappingURL=main.css.map */
+
+img.delete {
+    width: 16px;
+}
+
+table.email {
+    width: 100%;
+}
+
+table.email tr {
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+}
+
+table.email th, table.email td {
+    padding: 10px;
+}
+
+table.email td {
+    text-align: center;
+    width: 5%;
+}
+
+input.add-email {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: 0 none;
+    width: 100%;
+}
+
+.form-add-email {
+    margin-top: 10px;
+    text-align: right;
+}
+
+.form-add-email > div.row {
+	margin: 0;
+}

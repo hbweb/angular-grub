@@ -143,6 +143,28 @@
             <div class="tab-pane" id="email_addresses_form">
                 <h1>Email addresses</h1>
                 <!-- form goes here -->
+                <div ng-app="myApp" ng-controller="customersCtrl"> 
+					<table class="email table-hover">
+						<tbody>
+							<tr ng-repeat="x in emails">
+								<th>{{ x }}</th>
+								<td><img class="delete" src="img/icon/delete-xxl.png"></td>
+							</tr>
+							<tr>
+								<th>
+									<input class="add-email" placeholder="Add a new email address..." maxlength="100" ng-model="email">
+								</th>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="clear"></div>
+					<div class="form-actions form-add-email">
+                          <div class="row">
+                                <button type="submit" class="btn btn-primary" ng-click="add()">Save</button>
+                          </div>
+                      </div>
+				</div>
             </div>
         </div>
       </div>
@@ -154,10 +176,22 @@
       </footer>
     </div> <!-- /container -->        
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script src="node_modules/bootstrap-fileinput/js/fileinput.min.js"></script>
+        <script src="js/vendor/fileinput.min.js"></script>
 
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
         <script src="js/vendor/bootstrap.min.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/vendor/angular.min.js"></script>
+		<script>
+		var app = angular.module('myApp', []);
+		app.controller('customersCtrl', function($scope, $http) {
+		    $http.get("data/profile.json").then(function(response) {
+		        $scope.emails = response.data.emailAddresses;
+		    });
+		    $scope.add = function() {
+		        //code here
+		    };
+		});
+		</script>
     </body>
 </html>
