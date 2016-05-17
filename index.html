@@ -56,8 +56,6 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container">
-        
-        <p>You are on our demo page for CSS, HTML, Javascript and amazing UI</p>
       </div>
       <div class="container">
 		     <ul id="tabs" class="nav nav-pills" data-tabs="tabs">
@@ -118,28 +116,28 @@
             <div class="tab-pane" id="email_addresses_form">
                 <h1>Email addresses</h1>
                 <!-- form goes here -->
-                <div ng-app="myApp" ng-controller="customersCtrl"> 
-					<table class="email table-hover">
-						<tbody>
-							<tr ng-repeat="x in emails">
-								<th>{{ x }}</th>
-								<td><img class="delete" src="img/icon/delete-xxl.png"></td>
-							</tr>
-							<tr>
-								<th>
-									<input class="add-email" placeholder="Add a new email address..." maxlength="100" ng-model="email">
-								</th>
-								<td></td>
-							</tr>
-						</tbody>
-					</table>
-					<div class="clear"></div>
-					<div class="form-actions form-add-email">
-                          <div class="row">
-                                <button type="submit" class="btn btn-primary" ng-click="add()">Save</button>
-                          </div>
-                      </div>
-				</div>
+                <div> 
+      					<table class="email table-hover">
+      						<tbody>
+      							<tr ng-repeat="x in emails">
+      								<th>{{ x }}</th>
+      								<td><img class="delete" src="img/icon/delete-xxl.png"></td>
+      							</tr>
+      							<tr>
+      								<th>
+      									<input class="add-email" placeholder="Add a new email address..." maxlength="100" ng-model="email">
+      								</th>
+      								<td></td>
+      							</tr>
+      						</tbody>
+      					</table>
+      					<div class="clear"></div>
+      					<div class="form-actions form-add-email">
+                    <div class="row">
+                          <button type="submit" class="btn btn-primary" ng-click="add()">Save</button>
+                    </div>
+                </div>
+      				</div>
             </div>
         </div>
       </div>
