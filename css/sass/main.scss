@@ -7,7 +7,6 @@ $body-font: 'Source Sans Pro', sans-serif;
 $body-color: #8797af;
 $ip-orange-color: #ffa300;
 
-
 // Styles
 body {
   font-family: $body-font;
@@ -17,6 +16,13 @@ body {
 }
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
 }
 
 .navbar-main{
@@ -35,19 +41,73 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
+.navbar-email{
+	a{
+		color: #fff;
+		&:hover, &:active{
+			text-decoration: none;
+		}
+	}
+	span.icon-chevron-thin-down{
+		color:$ip-orange-color;
+		font-size:10px;
+		font-weight:200;
+	}
+}
+
+.nav-pills > li {
+	> a {
+	color: #8797AF;
+	text-transform:uppercase;
+	font-size: 12px;
+	margin: 0 0 7px 0;
+	padding: 5px 20px;
+	font-weight: 400;
+	}
+	
+	// Hover effect on tab
+	> a:before {
+	  content: "";
+	  position: absolute;
+	  width: 100%;
+	  height: 2px;
+	  bottom: -2px;
+	  left: 0;
+	  background-color: $ip-orange-color;
+	  visibility: hidden;
+	  -webkit-transform: scaleX(0);
+	  transform: scaleX(0);
+	  -webkit-transition: all 0.3s ease-in-out 0s;
+	  transition: all 0.3s ease-in-out 0s;
+	}
+	> a:hover:before {
+	  visibility: visible;
+	  -webkit-transform: scaleX(1);
+	  transform: scaleX(1);
+	}
+}
+
+.nav-pills > li > a:hover, .nav-pills > li.active > a:hover, .nav-pills > li > a:focus, .nav-pills > li.active > a:focus  {
+	border-radius: 0;
+	background: none;
+}
+
+.nav-pills > li.active > a {
+	background: none;
+	border-radius: 0;
+	border-bottom: 2px solid $ip-orange-color;
+}
 
 .display-hide{
 	display:none;
 }
 
 
-.jumbotron,
-.navbar-ipcentrum  {
+.jumbotron, .navbar-ipcentrum  {
   background: #2d333f;
 }
 
 .icon-ipcentrum-logo{
-	
 	width:180px;
   	color:#fff;
 	span{
@@ -56,10 +116,36 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
- .icon-ip-centrum-1{
+.icon-ip-centrum-1{
   color: $ip-orange-color;
 }
 
 .icon-ip-centrum-2{
   color: #fff;
 }
+
+.capitalize {
+  display: inline-block;
+}
+
+.capitalize::first-letter {
+  text-transform: uppercase;
+}
+
+#profile-summary{
+	margin: 0 0 50px;
+	.profile-mid{
+		@include border-radius(20px);
+		width: 75px;
+		height:75px;
+		background: #262a35;
+		float: left;
+		margin: 0 20px 0 0;
+		
+	}	
+
+	.profile-mid-right{
+		
+	}
+}
+

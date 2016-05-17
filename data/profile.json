@@ -2,11 +2,11 @@
     "emailAddresses": [
         {
             "email":"captain.kirk@starship.enterprise",
-            "isPrimary": true
+            "isPrimary": false
         },
         {
-            "email":"james.kirk@starship.enterprise",
-            "isPrimary": false
+            "email":"james.kirk@enterprise.co.uk",
+            "isPrimary": true
         }
     ],
     "forename": "James",

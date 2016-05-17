@@ -7,6 +7,6 @@ app.controller('ProfileCtrl', function($scope, $http){
         url : "data/profile.json"
     }).then(function (response) {
         $scope.profile = response.data;
-        //console.log(response.data);
+        console.log(response.data);
     });
 });
