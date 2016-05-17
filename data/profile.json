@@ -1,13 +1,9 @@
 {
     "emailAddresses": [
-        {
-            "email":"captain.kirk@starship.enterprise",
-            "isPrimary": true
-        },
-        {
-            "email":"james.kirk@starship.enterprise",
-            "isPrimary": false
-        }
+       "captain.kirk@starship.enterprise",
+       "captain.america@starship.enterprise",
+       "james.kirk@starship.enterprise",
+       "captain.face@starship.enterprise"
     ],
     "forename": "James",
     "photo": {

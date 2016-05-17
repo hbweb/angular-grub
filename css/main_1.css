@@ -34,3 +34,72 @@ input.add-email {
 .form-add-email > div.row {
 	margin: 0;
 }
+
+.profile h3 {
+    float: right;
+    margin-top: -100px;
+}
+
+.profile .btn-file {
+    margin-left: 168px;
+    margin-top: -60px;
+    position: absolute;
+    width: 100px;
+}
+
+.profile {
+	padding: 0 115px;
+}
+
+.profile .fileinput-remove {
+	margin-left: 280px;
+    margin-top: -60px;
+    position: absolute;
+}
+
+.profile img.file-preview-image {
+	border-radius: 10px !important;
+    max-width: 160px !important;
+    max-height: 160px !important;
+}
+
+#avatar {
+    height: 26px;
+    margin-top: -26px;
+    opacity: 0;
+    width: 100px;
+}
+
+.file-thumbnail-footer, .file-preview-status {
+	display: none;
+}
+
+.file-preview-frame {
+    height: 160px;
+    text-align: center;
+    width: 160px;
+}
+
+.form-body {
+    background: white none repeat scroll 0 0;
+    padding: 20px 0;
+}
+
+.jumbotron {
+    padding-bottom: 0;
+}
+
+.nav-pills > li > a {
+	color: #8797AF;
+}
+
+.nav-pills > li > a:hover, .nav-pills > li.active > a:hover, .nav-pills > li > a:focus, .nav-pills > li.active > a:focus  {
+	border-radius: 0;
+	background: none;
+}
+
+.nav-pills > li.active > a {
+	background: none;
+	border-radius: 0;
+	border-bottom: 2px solid #FFA300;
+}

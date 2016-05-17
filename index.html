@@ -59,49 +59,56 @@
         
         <p>You are on our demo page for CSS, HTML, Javascript and amazing UI</p>
       </div>
+      <div class="container">
+		     <ul id="tabs" class="nav nav-pills" data-tabs="tabs">
+		         <li class="active"><a href="#profile_form" data-toggle="tab">Profile</a></li>
+		         <li><a href="#email_addresses_form" data-toggle="tab">Email addresses</a></li>
+		     </ul>
+      </div>
     </div>
 
     <div class="container">
       <div id="content">
-        <ul id="tabs" class="nav nav-pills" data-tabs="tabs">
-            <li class="active"><a href="#profile_form" data-toggle="tab">Profile</a></li>
-            <li><a href="#email_addresses_form" data-toggle="tab">Email addresses</a></li>
-        </ul>
         <div id="my-tab-content" class="tab-content">
             <div class="tab-pane active" id="profile_form" ng-controller="ProfileCtrl">
                 <div class="row">
                   <div class="col-md-offset-3 col-md-6">
                     <!-- BEGIN FORM-->
                     <form action="#" id="form_sample_1" class="form-horizontal">
+                    	<div class="form-group">
+                        	<div class="profile">
+                             <input id="avatar" name="avatar" type="file" class="file-loading">
+                             <h3>Your Profile image</h3>
+                           </div>
+                        </div>
                         <div class="form-body">
 
                           <div class="alert alert-danger display-hide">
                               <button class="close" data-close="alert"></button> You have some form errors. Please check below. </div>
                           <div class="alert alert-success display-hide">
                               <button class="close" data-close="alert"></button> Your form validation is successful! </div>
-                          
                           <div class="form-group">
                               <label class="control-label col-md-3">First name</label>
-                              <div class="col-md-4"><input type="text" name="name" data-required="1" class="form-control" value="{{profile.forename}}" /> </div>
+                              <div class="col-md-8"><input type="text" name="name" data-required="1" class="form-control" value="{{profile.forename}}" /> </div>
                           </div>
 
                           <div class="form-group">
                               <label class="control-label col-md-3">Surname</label>
-                              <div class="col-md-4"><input type="text" name="name" data-required="1" class="form-control" value="{{profile.surname}}"  /> </div>
+                              <div class="col-md-8"><input type="text" name="name" data-required="1" class="form-control" value="{{profile.surname}}"  /> </div>
                           </div>
 
                           <div class="form-group">
                               <label class="control-label col-md-3">Position</label>
-                              <div class="col-md-4"><input type="text" name="name" data-required="1" class="form-control" value="{{profile.title}}"  /> </div>
+                              <div class="col-md-8"><input type="text" name="name" data-required="1" class="form-control" value="{{profile.title}}"  /> </div>
                           </div>
 
-                      </div>
-                      <div class="form-actions">
-                          <div class="row">
-                              <div class="col-md-offset-3 col-md-9">
-                                  <button type="submit" class="btn btn-primary">Save</button>
-                              </div>
-                          </div>
+	                      <div class="form-actions">
+	                          <div class="row">
+	                              <div class="col-md-offset-9 col-md-9">
+	                                  <button type="submit" class="btn btn-primary">Save</button>
+	                              </div>
+	                          </div>
+	                      </div>
                       </div>
                     </form>
                     <!-- END FORM-->
@@ -145,6 +152,7 @@
     </div> <!-- /container -->        
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+        <script src="js/vendor/fileinput.js"></script>
         <script src="js/vendor/bootstrap.min.js"></script>
         <script src="js/main.js"></script>
         <script src="js/profile.js"></script>
