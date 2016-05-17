@@ -128,16 +128,17 @@
                     </div>
                 </div>
             </div>
-            <div class="tab-pane" id="email_addresses_form">
+            <div class="tab-pane" id="email_addresses_form" ng-controller="customersCtrl">
                 <h1>Email addresses</h1>
+                <div id="my-alerts"></div>
                 <!-- form goes here -->
                 <div> 
       					<table class="email table-hover">
       						<tbody>
-      							<tr ng-repeat="x in emails">
-      								<th>{{ x }}</th>
-      								<td><img class="delete" src="img/icon/delete-xxl.png"></td>
-      							</tr>
+                            <tr ng-repeat="x in emails">
+                                <th>{{ x.email }}</th>
+                                <td><img class="delete" src="img/icon/delete-xxl.png" ng-click="deleteEmail(x.email)"></td>
+                            </tr>
       							<tr>
       								<th>
       									<input class="add-email" placeholder="Add a new email address..." maxlength="100" ng-model="email">
@@ -149,7 +150,7 @@
       					<div class="clear"></div>
       					<div class="form-actions form-add-email">
                     <div class="row">
-                          <button type="submit" class="btn btn-primary" ng-click="add()">Save</button>
+                          <button type="submit" class="btn btn-primary" ng-click="addEmail()">Save</button>
                     </div>
                 </div>
       				</div>
@@ -169,6 +170,25 @@
         <script src="js/vendor/bootstrap.min.js"></script>
         <script src="js/main.js"></script>
         <script src="js/profile.js"></script>
-        
+        <script src="js/emailaddress.js"></script>
+        <script>
+            function scAddAlert( jqRootID, newID, type, innerHtml ) {
+                if($('#'+newID).length != 0) return; // already exists
+                var newDiv = '<div id="' + newID + '" class="alert ' + type + ' alert-dismissible fade in" role="alert">';
+                var newButton = '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>';
+
+                $( "#"+jqRootID ).prepend( newDiv );
+                $( "#"+newID ).append( newButton );
+                $( "#"+newID ).append( innerHtml );
+            }
+
+            function scDelAlert( jqRootID, existID, type ) {
+                if($('#'+existID).length == 0) return; // no exists
+                var existDiv = '<div id="' + existID + '" class="alert ' + type + ' alert-dismissible fade in" role="alert">';
+                $( "#"+existID ).empty();
+                $( "#"+jqRootID ).empty();
+
+            }
+        </script>
     </body>
 </html>
