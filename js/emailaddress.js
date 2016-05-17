@@ -7,8 +7,6 @@ app.controller('customersCtrl', function($scope, $http){
     }).then(function (response) {
         $scope.emails = response.data.emailAddresses;
         $scope.email = '';
-        console.log("qqqqqqqqq");
-        console.log($scope.emails);
         $scope.deleteEmail = function(deleteEmail){
             console.log(deleteEmail);
             var length = $scope.emails.length;
