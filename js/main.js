@@ -7,7 +7,7 @@ $(document).ready(function ($) {
 	    maxFileSize: 1500,
 	    showClose: false,
 	    showCaption: false,
-	    browseLabel: 'Browse',
+	    browseLabel: 'Change',
 	    removeLabel: 'Remove',
 	    browseIcon: '<i class="glyphicon glyphicon-folder-open"></i>',
 	    removeIcon: '<i class="glyphicon glyphicon-remove"></i>',

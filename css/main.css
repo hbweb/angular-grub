@@ -26,6 +26,40 @@ h1, h2, h3, h4, h5, h6 {
   color: #ffa300;
   font-size: 10px;
   font-weight: 200; }
+.navbar-email span.glyphicon-user {
+    color: RGB(228, 228, 228);
+    font-size: 22px;
+    top:6px;
+    padding:5px;
+    background-color: RGB(216, 216, 216);
+    border-radius: 5px;
+    margin-right:4px;
+    font-weight: 200; }
+
+span.capitalize{
+    color:RGB(228, 228, 228);
+}
+div.profile-mid-right{
+  height:50px;
+}
+
+
+span.profileImageText{
+  color: #2d333f;
+}
+hr{
+  width: 90%
+}
+
+button.btn-save{
+  color:#ffffff;
+  background-color:#ffa300;
+  width: 80px
+}
+span.profileInfoText{
+  color: #2d333f;
+  margin-left:30px
+}
 
 .nav-pills > li > a {
   color: #8797AF;
@@ -89,6 +123,7 @@ h1, h2, h3, h4, h5, h6 {
 #profile-summary {
   margin: 0 0 50px; }
   #profile-summary .profile-mid {
+    text-align: center;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     -ms-border-radius: 20px;
