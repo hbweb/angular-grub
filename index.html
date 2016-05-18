@@ -129,7 +129,7 @@
                 </div> <!-- end row -->
             </div>
 
-            <div class="tab-pane" id="email_addresses_form" class ="emaillogins"ng-controller="customersCtrl">
+            <div class="tab-pane" id="email_addresses_form" class ="emaillogins" ng-controller="customersCtrl">
                 <div class="row">
                   <p class="emailNotify"><span>You can log in using multiple email addresses but using the same password. Add and remove which email addresses you can login in with.</span></p>
                 </div>
@@ -139,21 +139,22 @@
                       <h4><span class="profileInfoText">Emails</span></h4>
                       <hr>
                       </div>
-
-                      <div id="my-alerts"></div>
                       <div class="emails">
-                              <table class="email table-hover">
+
+                        <div id="my-alerts"></div>  
+                              <table class="table email table-hover">
+
                                   <tbody>
-                                  <tr ng-repeat="x in emails">
-                                      <th>{{ x.email }}</th>
-                                      <td><span class="delete glyphicon glyphicon-trash" ng-click="deleteEmail(x.email)"></span></td>
+                                  <tr ng-repeat="x in emails" class="profile-emails"  ng-class="{'primaryEmail': x.isPrimary}">
+                                      <td class="col-md-11 text-left">{{ x.email }}</td>
+                                      <td class="col-md-1 text-right""><span class="delete glyphicon glyphicon-trash" ng-click="deleteEmail(x.email)"></span></td>
                                   </tr>
-                                      <tr>
-                                          <th>
-                                              <input class="add-email" placeholder="Add a new email address..." maxlength="100" ng-model="email">
-                                          </th>
-                                          <td></td>
-                                      </tr>
+                                  <tr>
+                                      <td class="col-md-11 text-left">
+                                          <input class="add-email" placeholder="Add a new email address..." maxlength="100" ng-model="email">
+                                      </td>
+                                      <td class="col-md-1"></td>
+                                  </tr>
                                   </tbody>
                               </table>
                               <div class="clear"></div>

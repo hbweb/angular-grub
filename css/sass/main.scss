@@ -206,8 +206,33 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
+
 .emails{
-  margin-top:30px
+  margin:30px 40px;
+  
+  .text-left{
+  	text-align:left;
+  	padding: 20px 0 20px 20px;
+  	font-size:14px;
+  	margin-left:10px;
+  }
+
+  .text-right{
+  	text-align:right;
+  	padding: 20px 50px 20px;
+  	font-size:14px;
+  }
+
+  tr{
+  	border-bottom:1px #e3ebf0 solid;
+  	border-top: none;
+	}
+
+	.primaryEmail{
+  	border-bottom:2px #ffe3c0 solid;
+  	border-top:2px #ffe3c0 solid;	
+  	background: #fffcf4;
+  }
 }
 
 .emailNotify{
@@ -233,35 +258,16 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
-
-/* Tidy up */
-
-img.delete {
-    width: 16px;
+.table > tbody > tr > td{
+	border-top: none;
 }
 
-table.email {
-    width: 100%;
-}
 
-table.email tr {
-    border-top: 1px solid;
-    border-bottom: 1px solid;
-}
-
-table.email th, table.email td {
-    padding: 10px;
-}
-
-table.email td {
-    text-align: center;
-    width: 5%;
-}
-
-input.add-email {
-    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+.add-email {
     border: 0 none;
+    color: #bdc6d5;
     width: 100%;
+    padding: 5px 0;
 }
 
 .form-add-email {
@@ -271,25 +277,6 @@ input.add-email {
 
 .form-add-email > div.row {
 	margin: 0;
-}
-
-.profile h3 {
-    float: right;
-    margin-top: -100px;
-}
-
-.profile .btn-file {
-    margin-left: 168px;
-    margin-top: -60px;
-    position: absolute;
-    width: 100px;
-}
-
-
-.file-preview-frame {
-    height: 160px;
-    text-align: center;
-    width: 160px;
 }
 
 .jumbotron {
