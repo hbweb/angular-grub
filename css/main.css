@@ -27,39 +27,14 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 10px;
   font-weight: 200; }
 .navbar-email span.glyphicon-user {
-    color: RGB(228, 228, 228);
-    font-size: 22px;
-    top:6px;
-    padding:5px;
-    background-color: RGB(216, 216, 216);
-    border-radius: 5px;
-    margin-right:4px;
-    font-weight: 200; }
-
-span.capitalize{
-    color:RGB(228, 228, 228);
-}
-div.profile-mid-right{
-  height:50px;
-}
-
-
-span.profileImageText{
-  color: #2d333f;
-}
-hr{
-  width: 90%
-}
-
-button.btn-save{
-  color:#ffffff;
-  background-color:#ffa300;
-  width: 80px
-}
-span.profileInfoText{
-  color: #2d333f;
-  margin-left:30px
-}
+  color: RGB(228, 228, 228);
+  font-size: 22px;
+  top: 6px;
+  padding: 5px;
+  background-color: RGB(216, 216, 216);
+  border-radius: 5px;
+  margin-right: 4px;
+  font-weight: 200; }
 
 .nav-pills > li > a {
   color: #8797AF;
@@ -115,15 +90,30 @@ span.profileInfoText{
   color: #fff; }
 
 .capitalize {
-  display: inline-block; }
+  display: inline-block;
+  color: RGB(228, 228, 228); }
 
 .capitalize::first-letter {
   text-transform: uppercase; }
 
+.profileImageText {
+  color: #2d333f; }
+
+.profileInfoText {
+  color: #2d333f;
+  margin-left: 30px; }
+
+hr {
+  width: 90%; }
+
+.btn-save {
+  color: #ffffff;
+  background-color: #fa9d1c;
+  width: 80px; }
+
 #profile-summary {
   margin: 0 0 50px; }
   #profile-summary .profile-mid {
-    text-align: center;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     -ms-border-radius: 20px;
@@ -132,6 +122,42 @@ span.profileInfoText{
     height: 75px;
     background: #262a35;
     float: left;
-    margin: 0 20px 0 0; }
+    margin: 0 20px 0 0;
+    text-align: center; }
+  #profile-summary .profile-mid-right {
+    float: left;
+    margin-left: 20px; }
+
+.profile-mid-right-text {
+  font-size: 20px;
+  margin-top: 6px;
+  height: 20px; }
+
+div.container {
+  margin-bottom: 30px; }
+
+div.separator {
+  float: left;
+  width: 0;
+  height: 60px;
+  margin-top: 5px;
+  border-right: 1px solid #262D38;
+  box-shadow: 1px 0 0 0 #343B4A; }
+
+#email_addresses_form {
+  border-color: #E6E6E6;
+  border-width: 2px;
+  border-style: solid;
+  background-color: #E8E8E8;
+  padding: 20px; }
+
+div.emails {
+  margin-top: 30px; }
+
+div.emailNotify {
+  background-color: #262626;
+  height: 40px;
+  width: 100%;
+  font-size: 15px; }
 
 /*# sourceMappingURL=main.css.map */
