@@ -9,5 +9,8 @@
   "author": "Hung Bui",
   "license": "ISC",
   "dependencies": {
+    "angular": "^1.5.5",
+    "jquery": "^2.2.3",
+    "webpack": "^1.13.0"
   }
 }

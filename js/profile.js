@@ -1,3 +1,6 @@
+// For Webpack
+// require('angular');
+
 var app = angular.module('deBankeApp', []);
 
 // Profile Controller
@@ -10,3 +13,5 @@ app.controller('ProfileCtrl', function($scope, $http){
         console.log(response.data);
     });
 });
+
+

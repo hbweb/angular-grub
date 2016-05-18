@@ -1,3 +1,5 @@
+// For Webpack
+// require('angular');
 
 // Emailaddress Controller
 app.controller('customersCtrl', function($scope, $http){
