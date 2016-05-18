@@ -13,6 +13,8 @@ body {
   font-weight: normal;
   background: #ecedf2;
   color: $body-color;
+  -webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
 }
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
@@ -73,7 +75,7 @@ h1, h2, h3, h4, h5, h6 {
 	padding: 5px 20px;
 	font-weight: 400;
 	}
-	
+
 	// Hover effect on tab
 	> a:before {
 	  content: "";
@@ -164,8 +166,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-save{
   color:#ffffff;
-  background-color:$ip-orange-color;
-  width: 80px
+  background-color:#f99d1c;
+  width: 80px;
+  border-radius:1px;
+  border: 1px solid #da8521;
+  &:hover{
+    color: #FFF;
+  }
 }
 
 #profile-summary{
@@ -176,10 +183,11 @@ h1, h2, h3, h4, h5, h6 {
 		height:75px;
 		background: #262a35;
 		float: left;
+    position: relative;
 		margin: 0 20px 0 0;
-	  	text-align: center;
-		
-	}	
+	  text-align: center;
+    overflow: hidden;
+	}
 
 	.profile-mid-right{
 		float:left;
@@ -224,6 +232,10 @@ h1, h2, h3, h4, h5, h6 {
 .form-body {
     background: #fff;
     padding: 20px 0;
+    border-radius: 1px;
+    box-shadow: 0 0 3px #dadada;
+    -webkit-box-shadow: 0 0 3px #dadada;
+    -moz-box-shadow: 0 0 3px #dadada;
 }
 
 
@@ -296,5 +308,107 @@ input.add-email {
     padding-bottom: 0;
 }
 
-
-
+/* Upload avatar */
+.form-horizontal{
+  .control-label{
+    font-weight: normal;
+  }
+}
+.form-control{
+  background-color: #fafbfc;
+  border: 1px solid #bdc3d1;
+  color: #5e687d;
+  border-radius: 1px;
+  padding: 15px 20px;
+  box-shadow: none;
+}
+.btn-grey{
+  border: 1px solid #bdc3d1;
+  border-radius: 0;
+  background-color: #FFF;
+  color: #8b96ae;
+  width: 90px;
+  box-shadow: 0 0 3px #dadada;
+  -webkit-box-shadow: 0 0 3px #dadada;
+  -moz-box-shadow: 0 0 3px #dadada;
+}
+.fileUpload {
+    position: relative;
+    overflow: hidden;
+    margin: 10px 10px 10px 0;
+    input.upload {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+        cursor: pointer;
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+}
+.profile-info{
+  h4{
+    color: #5e687d;
+    font-weight: 600;
+    font-size: 18px;
+  }
+}
+.image-preview{
+  width: 130px;
+  height: 130px;
+  border-radius: 20px;
+  background: #FFF;
+  box-shadow: 0 0 3px #dadada;
+  -webkit-box-shadow: 0 0 3px #dadada;
+  -moz-box-shadow: 0 0 3px #dadada;
+  position: relative;;
+  overflow: hidden;
+  .no-avatar{
+    width: calc(100% - 3px);
+    height: calc(100% - 3px);
+    z-index: 2;
+    padding: 3px;
+    overflow: hidden;
+    position: relative;
+    .head{
+      width: 40px;
+      height: 40px;
+      border-radius: 20px;
+      background-color: #ebedf3;
+      position: absolute;
+      left: calc(50% - 20px);
+      top: 35px;
+    }
+    .body{
+    width: 80px;
+      height: 80px;
+      border-radius: 40px;
+      background-color: #ebedf3;
+      position: absolute;
+      left: calc(50% - 40px);
+      top: 80px;
+    }
+  }
+}
+.mini-avatar{
+  display: inline-block;
+  position: relative;
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  vertical-align: middle;
+  border-radius: 5px;
+  span.glyphicon-user{
+    margin: 0;
+  }
+}
+img.has-image{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  top: 0;
+  left: 0;
+}

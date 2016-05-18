@@ -50,7 +50,11 @@
               </ul>
 
               <div class="navbar-text navbar-right navbar-email">
-                <span class="glyphicon glyphicon-user"></span>
+                <div class="mini-avatar">
+                  <span class="glyphicon glyphicon-user">
+                  </span>
+                  <img class="img"  id="profile-image-mini"/>
+                </div>
                 <a class="navbar-link" href="#">
                 <i class="small-profile-pic"></i>
                     {{currentEmail}}
@@ -68,6 +72,7 @@
         <div id="profile-summary" ng-controller="ProfileCtrl">
           <div class="profile-mid">
               <h2><span>{{midName}}</span></h2>
+              <img class="img"  id="profile-image-mid"/>
           </div>
           <div class="separator"></div>
           <div class="profile-mid-right">
@@ -93,8 +98,24 @@
                     <!-- BEGIN FORM-->
                     <form action="#" id="form_sample_1" class="form-horizontal">
                     	 <div class="form-group">
-                        	<div class="profile">
-                             <h3><span class="profileImageText">Your Profile image</span></h3>
+                        	<div class="profile col-md-12">
+                            <div class="image-upload-preview col-md-5">
+                              <div class="image-preview pull-right">
+                                <div class="no-avatar">
+                                  <div class="head"></div>
+                                  <div class="body"></div>
+                                </div>
+                                <img class="img"  id="profile-image-uploaded"/>
+                              </div>
+                            </div>
+                            <div class="profile-info col-md-7">
+                              <h4>Your Profile image</h4>
+                                <div class="fileUpload btn btn-grey">
+                                  <span>Change</span>
+                                  <input type='file' id="imgInp"  class="upload" />
+                                </div>
+                              <button class="btn btn-grey" id="remove-avatar">Remove</button>
+                            </div>
                            </div>
                         </div>
                         <div class="form-body">
@@ -181,6 +202,7 @@
         <!-- webpack <script src="js/main.js"></script>-->
         <script src="js/profile.js"></script>
         <script src="js/emailaddress.js"></script>
+        <script src="js/avatar.js"></script>
         <script>
             function scAddAlert( jqRootID, newID, type, innerHtml ) {
                 if($('#'+newID).length != 0) return; // already exists
