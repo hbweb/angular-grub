@@ -71,9 +71,10 @@
           <div class="profile-mid">
               <h2><span>{{midName}}</span></h2>
           </div>
+          <div class="separator"></div>
           <div class="profile-mid-right">
-            <h3><span class="capitalize">{{profile.forename}}</span> <span class="capitalize">{{profile.surname}}</span></h3>
-            <h4><span>{{profile.title}}</span></h4>
+            <div class="profile-mid-right-text"><span class="capitalize">{{profile.forename}}</span> <span class="capitalize">{{profile.surname}}</span></div>
+            <div class="profile-mid-right-text"><span>{{profile.title}}</span></div>
           </div>
         </div>
       </div>
@@ -134,32 +135,35 @@
                 </div>
             </div>
             <div class="tab-pane" id="email_addresses_form" ng-controller="customersCtrl">
-                <h1>Email addresses</h1>
-                <div id="my-alerts"></div>
-                <!-- form goes here -->
+                <div class="emailNotify"><span>You can log in using multiple email addresses but using the same password. Add and remove which email addresses you can login in with.</span></div>
                 <div>
-      					<table class="email table-hover">
-      						<tbody>
-                            <tr ng-repeat="x in emails">
-                                <th>{{ x.email }}</th>
-                                <td><img class="delete" src="img/icon/delete-xxl.png" ng-click="deleteEmail(x.email)"></td>
-                            </tr>
-      							<tr>
-      								<th>
-      									<input class="add-email" placeholder="Add a new email address..." maxlength="100" ng-model="email">
-      								</th>
-      								<td></td>
-      							</tr>
-      						</tbody>
-      					</table>
-      					<div class="clear"></div>
-      					<div class="form-actions form-add-email">
-                    <div class="row">
-                          <button type="submit" class="btn btn-save" ng-click="addEmail()">Save</button>
+                    <h3>EMAILS</h3>
+                    <div id="my-alerts"></div>
+                    <!-- form goes here -->
+                        <div class="emails">
+                                <table class="email table-hover">
+                                    <tbody>
+                                    <tr ng-repeat="x in emails">
+                                        <th>{{ x.email }}</th>
+                                        <td><img class="delete" src="img/icon/delete-xxl.png" ng-click="deleteEmail(x.email)"></td>
+                                    </tr>
+                                        <tr>
+                                            <th>
+                                                <input class="add-email" placeholder="Add a new email address..." maxlength="100" ng-model="email">
+                                            </th>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="clear"></div>
+                                <div class="form-actions form-add-email">
+                                    <div class="row">
+                                          <button type="submit" class="btn btn-save" ng-click="addEmail()">Save</button>
+                                    </div>
+                                </div>
+                        </div>
                     </div>
                 </div>
-      				</div>
-            </div>
         </div>
       </div>
 
