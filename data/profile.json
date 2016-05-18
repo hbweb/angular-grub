@@ -7,6 +7,14 @@
         {
             "email":"james.kirk@enterprise.co.uk",
             "isPrimary": true
+        },
+        {
+            "email":"james.t.kirk@enterprise.co.uk",
+            "isPrimary": false
+        },
+        {
+            "email":"j.t.kirk@starship.co.uk",
+            "isPrimary": false
         }
     ],
     "forename": "James",
