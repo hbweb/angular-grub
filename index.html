@@ -20,9 +20,7 @@
         </style>
 
         <link rel="stylesheet" href="https://s3.amazonaws.com/icomoon.io/68294/IPCentrum-Website/style.css?-6z1stg">
-
         <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/main_1.css">
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
     </head>
@@ -74,7 +72,7 @@
           <div class="separator"></div>
           <div class="profile-mid-right">
             <div class="profile-mid-right-text"><span class="capitalize">{{profile.forename}}</span> <span class="capitalize">{{profile.surname}}</span></div>
-            <div class="profile-mid-right-text"><span>{{profile.title}}</span></div>
+            <div class="profile-mid-right-text"><span class="profile-mid-title">{{profile.title}}</span></div>
           </div>
         </div>
       </div>
@@ -94,18 +92,14 @@
                   <div class="col-md-offset-3 col-md-6">
                     <!-- BEGIN FORM-->
                     <form action="#" id="form_sample_1" class="form-horizontal">
-                    	<div class="form-group">
+                    	 <div class="form-group">
                         	<div class="profile">
-                             <input id="avatar" name="avatar" type="file" class="file-loading">
                              <h3><span class="profileImageText">Your Profile image</span></h3>
                            </div>
                         </div>
                         <div class="form-body">
-                          <div class="alert alert-danger display-hide">
-                              <button class="close" data-close="alert"></button> You have some form errors. Please check below. </div>
-                          <div class="alert alert-success display-hide">
-                              <button class="close" data-close="alert"></button> Your form validation is successful! </div>
-                          <div><h4><span class="profileInfoText">PROFILE INFORMATION</span></h4></div><hr>
+                          <h4><span class="profileInfoText">PROFILE INFORMATION</span></h4>
+                          <hr>
                           <div class="form-group">
                               <label class="control-label col-md-3">First name</label>
                               <div class="col-md-8"><input type="text" name="name" data-required="1" class="form-control" value="{{profile.forename}}" /> </div>
@@ -132,38 +126,46 @@
                     </form>
                     <!-- END FORM-->
                     </div>
-                </div>
+                </div> <!-- end row -->
             </div>
-            <div class="tab-pane" id="email_addresses_form" ng-controller="customersCtrl">
-                <div class="emailNotify"><span>You can log in using multiple email addresses but using the same password. Add and remove which email addresses you can login in with.</span></div>
-                <div>
-                    <h3>EMAILS</h3>
-                    <div id="my-alerts"></div>
-                    <!-- form goes here -->
-                        <div class="emails">
-                                <table class="email table-hover">
-                                    <tbody>
-                                    <tr ng-repeat="x in emails">
-                                        <th>{{ x.email }}</th>
-                                        <td><img class="delete" src="img/icon/delete-xxl.png" ng-click="deleteEmail(x.email)"></td>
-                                    </tr>
-                                        <tr>
-                                            <th>
-                                                <input class="add-email" placeholder="Add a new email address..." maxlength="100" ng-model="email">
-                                            </th>
-                                            <td></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <div class="clear"></div>
-                                <div class="form-actions form-add-email">
-                                    <div class="row">
-                                          <button type="submit" class="btn btn-save" ng-click="addEmail()">Save</button>
-                                    </div>
-                                </div>
-                        </div>
-                    </div>
+
+            <div class="tab-pane" id="email_addresses_form" class ="emaillogins"ng-controller="customersCtrl">
+                <div class="row">
+                  <p class="emailNotify"><span>You can log in using multiple email addresses but using the same password. Add and remove which email addresses you can login in with.</span></p>
                 </div>
+                <div class="row">
+                  <div class="col-md-12 form-body">
+                      <div class="form-group">
+                      <h4><span class="profileInfoText">Emails</span></h4>
+                      <hr>
+                      </div>
+
+                      <div id="my-alerts"></div>
+                      <div class="emails">
+                              <table class="email table-hover">
+                                  <tbody>
+                                  <tr ng-repeat="x in emails">
+                                      <th>{{ x.email }}</th>
+                                      <td><span class="delete glyphicon glyphicon-trash" ng-click="deleteEmail(x.email)"></span></td>
+                                  </tr>
+                                      <tr>
+                                          <th>
+                                              <input class="add-email" placeholder="Add a new email address..." maxlength="100" ng-model="email">
+                                          </th>
+                                          <td></td>
+                                      </tr>
+                                  </tbody>
+                              </table>
+                              <div class="clear"></div>
+                              <div class="form-actions form-add-email">
+                                  <div class="row">
+                                        <button type="submit" class="btn btn-save" ng-click="addEmail()">Save</button>
+                                  </div>
+                              </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
         </div>
       </div>
 

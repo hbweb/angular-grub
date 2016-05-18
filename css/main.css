@@ -91,20 +91,21 @@ h1, h2, h3, h4, h5, h6 {
 
 .capitalize {
   display: inline-block;
-  color: RGB(228, 228, 228); }
-
-.capitalize::first-letter {
-  text-transform: uppercase; }
+  color: #fff; }
+  .capitalize ::first-letter {
+    text-transform: uppercase; }
 
 .profileImageText {
   color: #2d333f; }
 
 .profileInfoText {
-  color: #2d333f;
-  margin-left: 30px; }
+  color: #8797af;
+  margin-left: 30px;
+  text-transform: uppercase;
+  font-weight: 600; }
 
-hr {
-  width: 90%; }
+.form-body hr {
+  margin: 20px 30px; }
 
 .btn-save {
   color: #ffffff;
@@ -127,37 +128,85 @@ hr {
   #profile-summary .profile-mid-right {
     float: left;
     margin-left: 20px; }
+  #profile-summary .profile-mid-right-text {
+    font-size: 20px;
+    margin-top: 6px;
+    height: 20px; }
+    #profile-summary .profile-mid-right-text .profile-mid-title {
+      font-size: 18px; }
+  #profile-summary .separator {
+    float: left;
+    width: 0;
+    height: 60px;
+    margin-top: 5px;
+    border-right: 1px solid #262D38;
+    box-shadow: 1px 0 0 0 #343B4A; }
 
-.profile-mid-right-text {
-  font-size: 20px;
-  margin-top: 6px;
-  height: 20px; }
-
-div.container {
-  margin-bottom: 30px; }
-
-div.separator {
-  float: left;
-  width: 0;
-  height: 60px;
-  margin-top: 5px;
-  border-right: 1px solid #262D38;
-  box-shadow: 1px 0 0 0 #343B4A; }
-
-#email_addresses_form {
-  border-color: #E6E6E6;
-  border-width: 2px;
-  border-style: solid;
-  background-color: #E8E8E8;
-  padding: 20px; }
-
-div.emails {
+.emails {
   margin-top: 30px; }
 
-div.emailNotify {
-  background-color: #262626;
-  height: 40px;
-  width: 100%;
-  font-size: 15px; }
+.emailNotify {
+  background-color: #475062;
+  font-size: 14px;
+  padding: 10px 20px;
+  color: #ebeeef; }
+
+.container {
+  margin-bottom: 30px; }
+
+.form-body {
+  background: #fff;
+  padding: 20px 0; }
+
+.emaillogins .delete {
+  font-size: 12px; }
+
+/* Tidy up */
+img.delete {
+  width: 16px; }
+
+table.email {
+  width: 100%; }
+
+table.email tr {
+  border-top: 1px solid;
+  border-bottom: 1px solid; }
+
+table.email th, table.email td {
+  padding: 10px; }
+
+table.email td {
+  text-align: center;
+  width: 5%; }
+
+input.add-email {
+  background: transparent none repeat scroll 0 0;
+  border: 0 none;
+  width: 100%; }
+
+.form-add-email {
+  margin-top: 10px;
+  text-align: right; }
+
+.form-add-email > div.row {
+  margin: 0; }
+
+.profile h3 {
+  float: right;
+  margin-top: -100px; }
+
+.profile .btn-file {
+  margin-left: 168px;
+  margin-top: -60px;
+  position: absolute;
+  width: 100px; }
+
+.file-preview-frame {
+  height: 160px;
+  text-align: center;
+  width: 160px; }
+
+.jumbotron {
+  padding-bottom: 0; }
 
 /*# sourceMappingURL=main.css.map */
